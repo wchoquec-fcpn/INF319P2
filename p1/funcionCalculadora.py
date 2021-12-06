@@ -1,0 +1,50 @@
+# Para Ejecucion : \.spyder-py3>py funcionCalculadora.py
+def Menu():
+    """Funcion que Muestra el Menu"""
+    print("""========== Calculadora ==========
+  Menu
+1) Suma
+2) Resta
+3) Multiplicacion
+4) Division
+5) Salir""")
+
+# funciones Aritmeticas    
+def suma(x,y):
+    return x + y
+def resta(x,y):
+    return x - y
+def multiplica(x,y):
+    return x * y
+def dividir(x,y):
+   return x/y
+ 
+
+def Calculadora():
+    """Funcion Para Calcular Operaciones Aritmeticas"""
+    Menu()
+    opc = int(input("Selecione Opcion\n"))
+    while (opc >0 and opc <5):
+        x = int(input("Ingrese NUMERO\n"))
+        y = int(input("Ingrese Otro NUMERO\n"))
+        if (opc==1):
+            print ("La Suma es:", suma(x,y))
+           
+            opc = int(input("Selecione Opcion\n"))
+        elif(opc==2):
+            print ("La Resta es:",resta(x, y))
+            opc = int(input("Selecione Opcion\n"))
+        elif(opc==3):
+            print ("La Multiplicacion es:",multiplica(x, y))
+            opc = int(input("Selecione Opcion\n"))
+        elif(opc==4):
+            try:
+              print ("La Division es:", dividir(x, y))
+              opc = int(input("Selecione Opcion\n"))
+            except ZeroDivisionError:
+              print ("No se Permite la Division Entre 0")
+              opc = int(input("Selecione Opcion\n"))
+              
+             
+Calculadora()
+
